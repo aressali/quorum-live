@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quorum Cloud — Canlı Panel</title>
+<link rel="icon" href="data:,">
+<style>
+  :root{--bg:#0b0e14;--card:#141925;--bd:#222a3a;--fg:#e6ebf5;--dim:#8b97ad;
+        --green:#27c08a;--red:#ef5e6e;--amber:#e6a23c;--accent:#5b8cff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+       font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;padding:14px;max-width:760px;margin:0 auto}
+  header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  h1{font-size:18px;margin:0;letter-spacing:.5px}
+  .badge{font-size:11px;padding:3px 8px;border-radius:20px;background:var(--bd);color:var(--fg)}
+  .dim{color:var(--dim)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px}
+  .lbl{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.4px}
+  .val{font-size:22px;font-weight:700;margin-top:3px}
+  .sub{font-size:11px;color:var(--dim);margin-top:2px}
+  h2{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.6px;margin:18px 0 6px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:right;color:var(--dim);font-weight:500;font-size:11px;padding:6px 8px;border-bottom:1px solid var(--bd)}
+  th:first-child,td:first-child{text-align:left}
+  td{text-align:right;padding:7px 8px;border-bottom:1px solid #1a2130}
+  .pos{color:var(--green)} .neg{color:var(--red)}
+  .pill{font-size:10px;padding:2px 7px;border-radius:6px;font-weight:700}
+  .AL{background:rgba(39,192,138,.15);color:var(--green)} .SAT{background:rgba(239,94,110,.15);color:var(--red)}
+  .foot{margin:20px 0 8px;font-size:11px;color:var(--dim);line-height:1.6}
+  svg{width:100%;height:120px;display:block}
+</style>
+</head>
+<body>
+<header>
+  <h1>◆ QUORUM <span class="dim">CLOUD</span></h1>
+  <span class="badge">KÂĞIT MOD</span>
+  <span class="badge" id="piyasa" style="margin-left:auto">●</span>
+</header>
+<div class="dim" id="guncelleme" style="font-size:11px">yükleniyor…</div>
+
+<div class="grid">
+  <div class="card"><div class="lbl">Toplam Değer</div><div class="val" id="toplam">—</div>
+    <div class="sub" id="kz">başlangıca göre</div></div>
+  <div class="card"><div class="lbl">Kâr / Zarar</div><div class="val" id="kzbuyuk">—</div>
+    <div class="sub">başlangıç <span id="baslangic">—</span></div></div>
+  <div class="card"><div class="lbl">Pozisyon Değeri</div><div class="val" id="pozdeger">—</div>
+    <div class="sub" id="pozadet">—</div></div>
+  <div class="card"><div class="lbl">Kalan Nakit</div><div class="val" id="nakit">—</div>
+    <div class="sub">yatırılmamış</div></div>
+</div>
+
+<h2>Portföy Değeri</h2>
+<div class="card"><svg id="grafik" viewBox="0 0 600 120" preserveAspectRatio="none"></svg>
+  <div class="sub" style="margin-top:6px">Kesik çizgi = başlangıç. Üstündeyse kârda.</div></div>
+
+<h2>Açık Pozisyonlar</h2>
+<table><thead><tr><th>Sembol</th><th>Fiyat</th><th>Değer</th><th>Kâr/Zarar</th></tr></thead>
+<tbody id="pozisyonlar"><tr><td class="dim">—</td><td></td><td></td><td></td></tr></tbody></table>
+
+<h2>Son İşlemler</h2>
+<table><thead><tr><th>Zaman</th><th>Sembol</th><th>Yön</th><th>USDT</th><th>Sebep</th></tr></thead>
+<tbody id="islemler"></tbody></table>
+
+<h2>Son Kararlar</h2>
+<table><thead><tr><th>Zaman</th><th>Sembol</th><th>Karar</th><th>Gerekçe</th></tr></thead>
+<tbody id="kararlar"></tbody></table>
+
+<div class="foot">
+  🧠 Beyin <b>GitHub Actions</b>'ta çalışır (PC kapalıyken bile, ~15-30 dk'da bir) ·
+  💾 state Supabase değil GitHub'da · 👁️ bu panel <b>salt-okunur</b> ·
+  saatler Melbourne · veri Yahoo (hisse) + Binance (kripto) ·
+  bulut AI yok, saf matematik · <b>kâğıt mod — gerçek para değil</b>.
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const num=x=>(+x).toLocaleString("tr-TR",{maximumFractionDigits:2});
+const sgn=x=>(x>=0?"+":"")+num(x);
+const cl=x=>x>=0?"pos":"neg";
+const mel=z=>{const d=new Date(z);return isNaN(d)?"—":d.toLocaleString("tr-TR",{timeZone:"Australia/Melbourne",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});};
+
+function grafik(snaps,bas){
+  const el=$("grafik"); if(!snaps||snaps.length<2){el.innerHTML="";return;}
+  const v=snaps.map(s=>s.toplam_deger), lo=Math.min(...v,bas), hi=Math.max(...v,bas);
+  const W=600,H=120,pad=6,rng=(hi-lo)||1;
+  const x=i=>pad+i*(W-2*pad)/(v.length-1), y=val=>H-pad-(val-lo)/rng*(H-2*pad);
+  const pts=v.map((val,i)=>`${x(i).toFixed(1)},${y(val).toFixed(1)}`).join(" ");
+  const by=y(bas).toFixed(1), up=v[v.length-1]>=bas;
+  el.innerHTML=`<line x1="0" y1="${by}" x2="${W}" y2="${by}" stroke="#445" stroke-dasharray="4 4"/>`
+    +`<polyline points="${pts}" fill="none" stroke="${up?'#27c08a':'#ef5e6e'}" stroke-width="2"/>`;
+}
+
+async function yenile(){
+  try{
+    const d=await (await fetch("state.json?t="+Date.now())).json();
+    const du=d.durum||{};
+    $("guncelleme").textContent="Son güncelleme: "+mel(d.guncelleme);
+    const acik=d.piyasa&&d.piyasa.acik;
+    const pb=$("piyasa"); pb.textContent=(acik?"● PİYASA AÇIK":"● PİYASA KAPALI");
+    pb.style.background=acik?"#0e7a43":"#3a3a44"; pb.style.color="#fff";
+    $("toplam").textContent="$"+num(du.toplam_deger);
+    const kzc=cl(du.kar_zarar||0);
+    $("kz").innerHTML=`<span class="${kzc}">${sgn(du.kar_zarar)}$ (%${sgn(du.kar_zarar_pct)})</span>`;
+    $("kzbuyuk").innerHTML=`<span class="${kzc}">${sgn(du.kar_zarar)}$</span>`;
+    $("kzbuyuk").className="val "+kzc;
+    $("baslangic").textContent="$"+num(d.baslangic);
+    $("pozdeger").textContent="$"+num(du.pozisyon_deger);
+    $("pozadet").textContent=Object.keys(d.pozisyonlar||{}).length+" pozisyon";
+    $("nakit").textContent="$"+num(du.nakit);
+
+    const pz=d.pozisyonlar||{}; const ks=Object.keys(pz);
+    $("pozisyonlar").innerHTML = ks.length ? ks.map(s=>{const p=pz[s];
+      return `<tr><td><b>${s}</b></td><td>$${num(p.fiyat)}</td><td>$${num(p.deger)}</td>
+      <td class="${cl(p.kz)}">${sgn(p.kz)}$ (%${sgn(p.kz_pct)})</td></tr>`;}).join("")
+      : `<tr><td class="dim">nakitte (pozisyon yok)</td><td></td><td></td><td></td></tr>`;
+
+    const il=(d.islemler||[]).slice(-12).reverse();
+    $("islemler").innerHTML = il.map(t=>`<tr><td class="dim">${mel(t.zaman)}</td><td><b>${t.symbol}</b></td>
+      <td><span class="pill ${t.yon}">${t.yon}</span></td><td>$${num(t.usdt)}</td>
+      <td class="dim" style="font-size:11px">${t.sebep||""}</td></tr>`).join("")
+      || `<tr><td class="dim">henüz işlem yok</td><td></td><td></td><td></td><td></td></tr>`;
+
+    const kr=(d.kararlar||[]).slice(-12).reverse();
+    $("kararlar").innerHTML = kr.map(k=>`<tr><td class="dim">${mel(k.zaman)}</td><td><b>${k.symbol}</b></td>
+      <td><span class="pill ${k.aksiyon}">${k.aksiyon}</span></td>
+      <td class="dim" style="font-size:11px">${k.gerekce||""}</td></tr>`).join("")
+      || `<tr><td class="dim">henüz karar yok</td><td></td><td></td><td></td></tr>`;
+
+    grafik(d.snapshots, d.baslangic);
+  }catch(e){ $("guncelleme").textContent="state.json okunamadı (ilk çalışma bekleniyor)"; }
+}
+yenile(); setInterval(yenile, 60000);
+</script>
+</body>
+</html>

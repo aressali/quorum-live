@@ -1,0 +1,81 @@
+{
+ "guncelleme": "2026-06-18T14:06:55+00:00",
+ "baslangic": 1000.0,
+ "nakit": 0.0,
+ "pozisyonlar": {
+  "AMD": {
+   "qty": 0.9370315271303341,
+   "entry_price": 533.6,
+   "peak": 533.6,
+   "fiyat": 533.6,
+   "deger": 500.0,
+   "kz": 0.0,
+   "kz_pct": 0.0
+  },
+  "QQQ": {
+   "qty": 0.6787806474599584,
+   "entry_price": 736.615,
+   "peak": 736.615,
+   "fiyat": 736.61,
+   "deger": 500.0,
+   "kz": 0.0,
+   "kz_pct": 0.0
+  }
+ },
+ "durum": {
+  "toplam_deger": 1000.0,
+  "nakit": 0.0,
+  "pozisyon_deger": 1000.0,
+  "kar_zarar": 0.0,
+  "kar_zarar_pct": 0.0
+ },
+ "ayarlar": {
+  "agresif_mod": "1",
+  "son_rotasyon": "2026-06-18T14:06:55.695143+00:00"
+ },
+ "kararlar": [
+  {
+   "zaman": "2026-06-18T14:06:55+00:00",
+   "symbol": "AMD",
+   "aksiyon": "AL",
+   "fiyat": 533.6,
+   "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  },
+  {
+   "zaman": "2026-06-18T14:06:55+00:00",
+   "symbol": "QQQ",
+   "aksiyon": "AL",
+   "fiyat": 736.61,
+   "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  }
+ ],
+ "islemler": [
+  {
+   "zaman": "2026-06-18T14:06:55+00:00",
+   "symbol": "AMD",
+   "yon": "AL",
+   "qty": 0.937032,
+   "price": 533.6,
+   "usdt": 500.0,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-06-18T14:06:55+00:00",
+   "symbol": "QQQ",
+   "yon": "AL",
+   "qty": 0.678781,
+   "price": 736.61,
+   "usdt": 500.0,
+   "sebep": "momentum-rotasyon"
+  }
+ ],
+ "snapshots": [
+  {
+   "zaman": "2026-06-18T14:06:55+00:00",
+   "toplam_deger": 1000.0
+  }
+ ],
+ "piyasa": {
+  "acik": true
+ }
+}
