@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-06-26T15:28:39+00:00",
+ "guncelleme": "2026-06-26T16:04:17+00:00",
  "baslangic": 1000.0,
  "nakit": 0.0,
  "pozisyonlar": {
@@ -7,27 +7,27 @@
    "qty": 0.9370315271303341,
    "entry_price": 533.6,
    "peak": 543.73,
-   "fiyat": 514.41,
-   "deger": 482.02,
-   "kz": -17.98,
-   "kz_pct": -3.6
+   "fiyat": 519.38,
+   "deger": 486.68,
+   "kz": -13.32,
+   "kz_pct": -2.66
   },
   "QQQ": {
    "qty": 0.6787806474599584,
    "entry_price": 736.615,
    "peak": 740.87,
-   "fiyat": 711.45,
-   "deger": 482.92,
-   "kz": -17.08,
-   "kz_pct": -3.42
+   "fiyat": 712.88,
+   "deger": 483.89,
+   "kz": -16.11,
+   "kz_pct": -3.22
   }
  },
  "durum": {
-  "toplam_deger": 964.94,
+  "toplam_deger": 970.56,
   "nakit": 0.0,
-  "pozisyon_deger": 964.94,
-  "kar_zarar": -35.06,
-  "kar_zarar_pct": -3.51
+  "pozisyon_deger": 970.56,
+  "kar_zarar": -29.44,
+  "kar_zarar_pct": -2.94
  },
  "ayarlar": {
   "agresif_mod": "1",
@@ -465,6 +465,10 @@
   {
    "zaman": "2026-06-26T15:28:39+00:00",
    "toplam_deger": 964.94
+  },
+  {
+   "zaman": "2026-06-26T16:04:17+00:00",
+   "toplam_deger": 970.56
   }
  ],
  "piyasa": {
