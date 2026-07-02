@@ -1,37 +1,37 @@
 {
- "guncelleme": "2026-07-02T15:23:40+00:00",
+ "guncelleme": "2026-07-02T15:59:35+00:00",
  "baslangic": 1000.0,
  "nakit": 0.0,
  "pozisyonlar": {
-  "AMD": {
-   "qty": 0.9370315271303341,
-   "entry_price": 533.6,
-   "peak": 583.8111,
-   "fiyat": 516.37,
-   "deger": 483.85,
-   "kz": -16.15,
-   "kz_pct": -3.23
+  "GOOGL": {
+   "qty": 1.3667806270061325,
+   "entry_price": 355.89,
+   "peak": 355.89,
+   "fiyat": 355.89,
+   "deger": 486.42,
+   "kz": 0.0,
+   "kz_pct": 0.0
   },
-  "QQQ": {
-   "qty": 0.6787806474599584,
-   "entry_price": 736.615,
-   "peak": 740.87,
-   "fiyat": 715.33,
-   "deger": 485.55,
-   "kz": -14.45,
-   "kz_pct": -2.89
+  "SPY": {
+   "qty": 0.6532069084690092,
+   "entry_price": 744.67,
+   "peak": 744.67,
+   "fiyat": 744.67,
+   "deger": 486.42,
+   "kz": 0.0,
+   "kz_pct": 0.0
   }
  },
  "durum": {
-  "toplam_deger": 969.41,
+  "toplam_deger": 972.85,
   "nakit": 0.0,
-  "pozisyon_deger": 969.41,
-  "kar_zarar": -30.59,
-  "kar_zarar_pct": -3.06
+  "pozisyon_deger": 972.85,
+  "kar_zarar": -27.15,
+  "kar_zarar_pct": -2.72
  },
  "ayarlar": {
   "agresif_mod": "1",
-  "son_rotasyon": "2026-06-25T15:43:55.946799+00:00"
+  "son_rotasyon": "2026-07-02T15:59:35.299785+00:00"
  },
  "kararlar": [
   {
@@ -46,6 +46,34 @@
    "symbol": "QQQ",
    "aksiyon": "AL",
    "fiyat": 736.61,
+   "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "AMD",
+   "aksiyon": "SAT",
+   "fiyat": 519.65,
+   "gerekce": "Agresif: momentum dışı (çıkış)"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "QQQ",
+   "aksiyon": "SAT",
+   "fiyat": 715.87,
+   "gerekce": "Agresif: momentum dışı (çıkış)"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "GOOGL",
+   "aksiyon": "AL",
+   "fiyat": 355.89,
+   "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "SPY",
+   "aksiyon": "AL",
+   "fiyat": 744.67,
    "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
   }
  ],
@@ -66,6 +94,42 @@
    "qty": 0.678781,
    "price": 736.61,
    "usdt": 500.0,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "AMD",
+   "yon": "SAT",
+   "qty": 0.937032,
+   "price": 519.65,
+   "usdt": 486.93,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "QQQ",
+   "yon": "SAT",
+   "qty": 0.678781,
+   "price": 715.87,
+   "usdt": 485.92,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "GOOGL",
+   "yon": "AL",
+   "qty": 1.366781,
+   "price": 355.89,
+   "usdt": 486.42,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "symbol": "SPY",
+   "yon": "AL",
+   "qty": 0.653207,
+   "price": 744.67,
+   "usdt": 486.42,
    "sebep": "momentum-rotasyon"
   }
  ],
@@ -789,6 +853,10 @@
   {
    "zaman": "2026-07-02T15:23:40+00:00",
    "toplam_deger": 969.41
+  },
+  {
+   "zaman": "2026-07-02T15:59:35+00:00",
+   "toplam_deger": 972.85
   }
  ],
  "piyasa": {
