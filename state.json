@@ -1,37 +1,37 @@
 {
- "guncelleme": "2026-08-07T12:32:44+00:00",
+ "guncelleme": "2026-08-07T14:02:49+00:00",
  "baslangic": 1000.0,
  "nakit": 0.0,
  "pozisyonlar": {
-  "SPY": {
-   "qty": 0.5883785586398929,
-   "entry_price": 738.9,
-   "peak": 773.7,
-   "fiyat": 768.56,
-   "deger": 452.2,
-   "kz": 17.45,
-   "kz_pct": 4.01
-  },
   "MSFT": {
    "qty": 0.9559001202204618,
    "entry_price": 454.81,
-   "peak": 498.56,
-   "fiyat": 499.86,
-   "deger": 477.82,
-   "kz": 43.06,
-   "kz_pct": 9.91
+   "peak": 502.8799,
+   "fiyat": 502.88,
+   "deger": 480.7,
+   "kz": 45.95,
+   "kz_pct": 10.57
+  },
+  "AMZN": {
+   "qty": 1.638488336590637,
+   "entry_price": 276.89,
+   "peak": 276.89,
+   "fiyat": 276.89,
+   "deger": 453.68,
+   "kz": 0.0,
+   "kz_pct": 0.0
   }
  },
  "durum": {
-  "toplam_deger": 930.02,
+  "toplam_deger": 934.38,
   "nakit": 0.0,
-  "pozisyon_deger": 930.02,
-  "kar_zarar": -69.98,
-  "kar_zarar_pct": -7.0
+  "pozisyon_deger": 934.38,
+  "kar_zarar": -65.62,
+  "kar_zarar_pct": -6.56
  },
  "ayarlar": {
   "agresif_mod": "1",
-  "son_rotasyon": "2026-07-30T16:55:26.725894+00:00"
+  "son_rotasyon": "2026-08-07T14:02:49.185302+00:00"
  },
  "kararlar": [
   {
@@ -158,6 +158,20 @@
    "symbol": "MSFT",
    "aksiyon": "AL",
    "fiyat": 454.81,
+   "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  },
+  {
+   "zaman": "2026-08-07T14:02:49+00:00",
+   "symbol": "SPY",
+   "aksiyon": "SAT",
+   "fiyat": 771.07,
+   "gerekce": "Agresif: momentum dışı (çıkış)"
+  },
+  {
+   "zaman": "2026-08-07T14:02:49+00:00",
+   "symbol": "AMZN",
+   "aksiyon": "AL",
+   "fiyat": 276.89,
    "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
   }
  ],
@@ -323,13 +337,27 @@
    "price": 454.81,
    "usdt": 434.75,
    "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-08-07T14:02:49+00:00",
+   "symbol": "SPY",
+   "yon": "SAT",
+   "qty": 0.588379,
+   "price": 771.07,
+   "usdt": 453.68,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-08-07T14:02:49+00:00",
+   "symbol": "AMZN",
+   "yon": "AL",
+   "qty": 1.638488,
+   "price": 276.89,
+   "usdt": 453.68,
+   "sebep": "momentum-rotasyon"
   }
  ],
  "snapshots": [
-  {
-   "zaman": "2026-07-14T20:43:49+00:00",
-   "toplam_deger": 965.14
-  },
   {
    "zaman": "2026-07-14T21:43:23+00:00",
    "toplam_deger": 965.14
@@ -1925,9 +1953,13 @@
   {
    "zaman": "2026-08-07T12:32:44+00:00",
    "toplam_deger": 930.02
+  },
+  {
+   "zaman": "2026-08-07T14:02:49+00:00",
+   "toplam_deger": 934.38
   }
  ],
  "piyasa": {
-  "acik": false
+  "acik": true
  }
 }
