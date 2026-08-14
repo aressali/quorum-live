@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-08-14T18:36:33+00:00",
+ "guncelleme": "2026-08-14T19:23:23+00:00",
  "baslangic": 1000.0,
  "nakit": 0.0,
  "pozisyonlar": {
@@ -7,27 +7,27 @@
    "qty": 0.9559001202204618,
    "entry_price": 454.81,
    "peak": 510.4,
-   "fiyat": 495.31,
-   "deger": 473.47,
-   "kz": 38.71,
-   "kz_pct": 8.9
+   "fiyat": 495.23,
+   "deger": 473.4,
+   "kz": 38.64,
+   "kz_pct": 8.89
   },
   "NVDA": {
    "qty": 1.9218169155318097,
    "entry_price": 225.855,
    "peak": 225.855,
-   "fiyat": 224.93,
-   "deger": 432.27,
-   "kz": -1.78,
-   "kz_pct": -0.41
+   "fiyat": 224.99,
+   "deger": 432.39,
+   "kz": -1.66,
+   "kz_pct": -0.38
   }
  },
  "durum": {
-  "toplam_deger": 905.74,
+  "toplam_deger": 905.78,
   "nakit": 0.0,
-  "pozisyon_deger": 905.74,
-  "kar_zarar": -94.26,
-  "kar_zarar_pct": -9.43
+  "pozisyon_deger": 905.78,
+  "kar_zarar": -94.22,
+  "kar_zarar_pct": -9.42
  },
  "ayarlar": {
   "agresif_mod": "1",
@@ -390,10 +390,6 @@
   }
  ],
  "snapshots": [
-  {
-   "zaman": "2026-07-25T10:58:36+00:00",
-   "toplam_deger": 886.44
-  },
   {
    "zaman": "2026-07-25T11:59:21+00:00",
    "toplam_deger": 898.81
@@ -1989,6 +1985,10 @@
   {
    "zaman": "2026-08-14T18:36:33+00:00",
    "toplam_deger": 905.74
+  },
+  {
+   "zaman": "2026-08-14T19:23:23+00:00",
+   "toplam_deger": 905.78
   }
  ],
  "piyasa": {
