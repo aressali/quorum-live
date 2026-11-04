@@ -1,33 +1,33 @@
 {
- "guncelleme": "2026-11-04T11:38:22+00:00",
+ "guncelleme": "2026-11-04T18:54:20+00:00",
  "baslangic": 1000.0,
  "nakit": 0.0,
  "pozisyonlar": {
   "AAPL": {
    "qty": 1.2017650358409184,
    "entry_price": 350.34,
-   "peak": 350.34,
-   "fiyat": 331.9,
-   "deger": 398.87,
-   "kz": -22.16,
-   "kz_pct": -5.26
+   "peak": 353.105,
+   "fiyat": 353.11,
+   "deger": 424.35,
+   "kz": 3.32,
+   "kz_pct": 0.79
   },
   "TSLA": {
    "qty": 1.0381614373773431,
    "entry_price": 405.55,
    "peak": 405.55,
-   "fiyat": 398.5,
-   "deger": 413.71,
-   "kz": -7.32,
-   "kz_pct": -1.74
+   "fiyat": 388.86,
+   "deger": 403.7,
+   "kz": -17.33,
+   "kz_pct": -4.12
   }
  },
  "durum": {
-  "toplam_deger": 812.57,
+  "toplam_deger": 828.05,
   "nakit": 0.0,
-  "pozisyon_deger": 812.57,
-  "kar_zarar": -187.43,
-  "kar_zarar_pct": -18.74
+  "pozisyon_deger": 828.05,
+  "kar_zarar": -171.95,
+  "kar_zarar_pct": -17.2
  },
  "ayarlar": {
   "agresif_mod": "1",
@@ -710,10 +710,6 @@
   }
  ],
  "snapshots": [
-  {
-   "zaman": "2026-09-08T19:57:19+00:00",
-   "toplam_deger": 910.79
-  },
   {
    "zaman": "2026-09-08T22:03:41+00:00",
    "toplam_deger": 912.46
@@ -2309,9 +2305,13 @@
   {
    "zaman": "2026-11-04T11:38:22+00:00",
    "toplam_deger": 812.57
+  },
+  {
+   "zaman": "2026-11-04T18:54:20+00:00",
+   "toplam_deger": 828.05
   }
  ],
  "piyasa": {
-  "acik": false
+  "acik": true
  }
 }
