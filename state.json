@@ -1,37 +1,37 @@
 {
- "guncelleme": "2026-11-12T13:20:00+00:00",
+ "guncelleme": "2026-11-12T20:43:53+00:00",
  "baslangic": 1000.0,
  "nakit": 0.0,
  "pozisyonlar": {
-  "AMZN": {
-   "qty": 1.4841301606615294,
-   "entry_price": 259.79,
-   "peak": 271.7599,
-   "fiyat": 266.17,
-   "deger": 395.03,
-   "kz": 9.47,
-   "kz_pct": 2.46
+  "AAPL": {
+   "qty": 1.0876677889147701,
+   "entry_price": 355.125,
+   "peak": 355.125,
+   "fiyat": 355.12,
+   "deger": 386.26,
+   "kz": 0.0,
+   "kz_pct": 0.0
   },
-  "MSFT": {
-   "qty": 0.7195338335108313,
-   "entry_price": 535.85,
-   "peak": 544.32,
-   "fiyat": 521.13,
-   "deger": 374.97,
-   "kz": -10.59,
-   "kz_pct": -2.75
+  "TSLA": {
+   "qty": 0.9711807863643627,
+   "entry_price": 397.72,
+   "peak": 397.72,
+   "fiyat": 397.72,
+   "deger": 386.26,
+   "kz": 0.0,
+   "kz_pct": 0.0
   }
  },
  "durum": {
-  "toplam_deger": 770.0,
+  "toplam_deger": 772.52,
   "nakit": 0.0,
-  "pozisyon_deger": 770.0,
-  "kar_zarar": -230.0,
-  "kar_zarar_pct": -23.0
+  "pozisyon_deger": 772.52,
+  "kar_zarar": -227.48,
+  "kar_zarar_pct": -22.75
  },
  "ayarlar": {
   "agresif_mod": "1",
-  "son_rotasyon": "2026-11-05T20:19:42.281866+00:00"
+  "son_rotasyon": "2026-11-12T20:43:53.922533+00:00"
  },
  "kararlar": [
   {
@@ -354,6 +354,34 @@
    "symbol": "MSFT",
    "aksiyon": "AL",
    "fiyat": 535.85,
+   "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "AMZN",
+   "aksiyon": "SAT",
+   "fiyat": 267.68,
+   "gerekce": "Agresif: momentum dışı (çıkış)"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "MSFT",
+   "aksiyon": "SAT",
+   "fiyat": 521.51,
+   "gerekce": "Agresif: momentum dışı (çıkış)"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "AAPL",
+   "aksiyon": "AL",
+   "fiyat": 355.12,
+   "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "TSLA",
+   "aksiyon": "AL",
+   "fiyat": 397.72,
    "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
   }
  ],
@@ -771,13 +799,45 @@
    "price": 535.85,
    "usdt": 385.56,
    "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "AMZN",
+   "yon": "SAT",
+   "qty": 1.48413,
+   "price": 267.68,
+   "usdt": 397.27,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "MSFT",
+   "yon": "SAT",
+   "qty": 0.719534,
+   "price": 521.51,
+   "usdt": 375.24,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "AAPL",
+   "yon": "AL",
+   "qty": 1.087668,
+   "price": 355.12,
+   "usdt": 386.26,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "symbol": "TSLA",
+   "yon": "AL",
+   "qty": 0.971181,
+   "price": 397.72,
+   "usdt": 386.26,
+   "sebep": "momentum-rotasyon"
   }
  ],
  "snapshots": [
-  {
-   "zaman": "2026-09-13T06:49:43+00:00",
-   "toplam_deger": 945.02
-  },
   {
    "zaman": "2026-09-13T12:21:31+00:00",
    "toplam_deger": 945.02
@@ -2373,9 +2433,13 @@
   {
    "zaman": "2026-11-12T13:20:00+00:00",
    "toplam_deger": 770.0
+  },
+  {
+   "zaman": "2026-11-12T20:43:53+00:00",
+   "toplam_deger": 772.52
   }
  ],
  "piyasa": {
-  "acik": false
+  "acik": true
  }
 }
