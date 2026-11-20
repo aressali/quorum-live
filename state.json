@@ -1,37 +1,18 @@
 {
- "guncelleme": "2026-11-20T13:39:45+00:00",
+ "guncelleme": "2026-11-20T20:59:21+00:00",
  "baslangic": 1000.0,
- "nakit": 0.0,
- "pozisyonlar": {
-  "AAPL": {
-   "qty": 1.0876677889147701,
-   "entry_price": 355.125,
-   "peak": 357.4201,
-   "fiyat": 349.21,
-   "deger": 379.82,
-   "kz": -6.43,
-   "kz_pct": -1.67
-  },
-  "TSLA": {
-   "qty": 0.9711807863643627,
-   "entry_price": 397.72,
-   "peak": 397.72,
-   "fiyat": 374.41,
-   "deger": 363.62,
-   "kz": -22.64,
-   "kz_pct": -5.86
-  }
- },
+ "nakit": 708.14,
+ "pozisyonlar": {},
  "durum": {
-  "toplam_deger": 743.44,
-  "nakit": 0.0,
-  "pozisyon_deger": 743.44,
-  "kar_zarar": -256.56,
-  "kar_zarar_pct": -25.66
+  "toplam_deger": 708.14,
+  "nakit": 708.14,
+  "pozisyon_deger": 0.0,
+  "kar_zarar": -291.86,
+  "kar_zarar_pct": -29.19
  },
  "ayarlar": {
   "agresif_mod": "1",
-  "son_rotasyon": "2026-11-12T20:43:53.922533+00:00"
+  "son_rotasyon": "2026-11-20T20:59:21.173736+00:00"
  },
  "kararlar": [
   {
@@ -383,6 +364,20 @@
    "aksiyon": "AL",
    "fiyat": 397.72,
    "gerekce": "Agresif: en güçlü momentum (eşit ağırlık)"
+  },
+  {
+   "zaman": "2026-11-20T20:59:21+00:00",
+   "symbol": "AAPL",
+   "aksiyon": "SAT",
+   "fiyat": 342.53,
+   "gerekce": "Agresif: momentum dışı (çıkış)"
+  },
+  {
+   "zaman": "2026-11-20T20:59:21+00:00",
+   "symbol": "TSLA",
+   "aksiyon": "SAT",
+   "fiyat": 345.54,
+   "gerekce": "Agresif: momentum dışı (çıkış)"
   }
  ],
  "islemler": [
@@ -835,13 +830,27 @@
    "price": 397.72,
    "usdt": 386.26,
    "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-11-20T20:59:21+00:00",
+   "symbol": "AAPL",
+   "yon": "SAT",
+   "qty": 1.087668,
+   "price": 342.53,
+   "usdt": 372.56,
+   "sebep": "momentum-rotasyon"
+  },
+  {
+   "zaman": "2026-11-20T20:59:21+00:00",
+   "symbol": "TSLA",
+   "yon": "SAT",
+   "qty": 0.971181,
+   "price": 345.54,
+   "usdt": 335.58,
+   "sebep": "momentum-rotasyon"
   }
  ],
  "snapshots": [
-  {
-   "zaman": "2026-09-17T23:05:47+00:00",
-   "toplam_deger": 952.52
-  },
   {
    "zaman": "2026-09-18T00:51:08+00:00",
    "toplam_deger": 939.75
@@ -2437,9 +2446,13 @@
   {
    "zaman": "2026-11-20T13:39:45+00:00",
    "toplam_deger": 743.44
+  },
+  {
+   "zaman": "2026-11-20T20:59:21+00:00",
+   "toplam_deger": 708.14
   }
  ],
  "piyasa": {
-  "acik": false
+  "acik": true
  }
 }
