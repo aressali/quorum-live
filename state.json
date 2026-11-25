@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-25T16:12:09+00:00",
+ "guncelleme": "2026-11-25T22:19:53+00:00",
  "baslangic": 1000.0,
  "nakit": 708.14,
  "pozisyonlar": {},
@@ -851,10 +851,6 @@
   }
  ],
  "snapshots": [
-  {
-   "zaman": "2026-09-20T07:08:06+00:00",
-   "toplam_deger": 939.98
-  },
   {
    "zaman": "2026-09-20T12:39:33+00:00",
    "toplam_deger": 939.98
@@ -2450,9 +2446,13 @@
   {
    "zaman": "2026-11-25T16:12:09+00:00",
    "toplam_deger": 708.14
+  },
+  {
+   "zaman": "2026-11-25T22:19:53+00:00",
+   "toplam_deger": 708.14
   }
  ],
  "piyasa": {
-  "acik": true
+  "acik": false
  }
 }
